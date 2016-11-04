@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Esri</string>
+
+
+    <string name="StreetMapMenu">Streets</string>
+    <string name="TopoMenu">Topographic</string>
+    <string name="GrayMenu">Gray</string>
+    <string name="OceanMenu">Oceans</string>
+</resources>

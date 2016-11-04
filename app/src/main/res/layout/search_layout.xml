@@ -1,0 +1,27 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="menu_search"
+        android:onClick="onSearchButtonClicked"
+        android:src="@android:drawable/ic_menu_search" />
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/searchButton"
+        android:hint="search_hint"
+        android:inputType="text"
+        android:minWidth="150dp" >
+
+        <requestFocus />
+    </EditText>
+    </LinearLayout>

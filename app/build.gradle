@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "marc.com.esri"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    packagingOptions{
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.esri.arcgis.android:arcgis-android:10.2.8-1'
+    //rxjava
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.getbase:floatingactionbutton:1.9.0'
+    compile 'com.android.support:multidex:1.0.0'
+
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/baidumapapi_base_v4_1_0.jar')
+    compile files('libs/baidumapapi_cloud_v4_1_0.jar')
+    compile files('libs/baidumapapi_map_v4_1_0.jar')
+    compile files('libs/baidumapapi_radar_v4_1_0.jar')
+    compile files('libs/baidumapapi_search_v4_1_0.jar')
+    compile files('libs/baidumapapi_util_v4_1_0.jar')
+}
